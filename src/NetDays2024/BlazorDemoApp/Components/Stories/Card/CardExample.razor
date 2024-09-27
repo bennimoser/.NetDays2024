@@ -1,0 +1,30 @@
+﻿<div class="card" aria-hidden="true" style="width: 18rem;">
+    <img alt="card-image" src="images/card.png" class="card-img-top" />
+    <div class="card-body">
+        <h5 alt="card-title" class="card-title">@Title</h5>
+        <p alt="card-text" class="card-text">@Text</p>
+        <button alt="card-button" class="btn btn-primary">@ButtonText</button>
+    </div>
+</div>
+
+@code
+{
+
+    /// <summary>
+    ///     Titel der Card.
+    /// </summary>
+    [Parameter]
+    public string Title { get; set; } = "Titel";
+
+    /// <summary>
+    ///     Text der Card.
+    /// </summary>
+    [Parameter]
+    public string Text { get; set; } = "Text";
+
+    /// <summary>
+    ///     ButtonText der Card.
+    /// </summary>
+    [Parameter]
+    public string ButtonText { get; set; } = "ButtonText";
+}

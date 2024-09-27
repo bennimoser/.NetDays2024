@@ -1,0 +1,39 @@
+﻿@inject NavigationManager NavigationManager
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlazorDemoApp</title>
+    <base href="@(new Uri(NavigationManager.BaseUri).AbsolutePath)" />
+    <!--
+    If you need to add <link> or <script> elements to include CSS 
+    or JavaScript files for canvas views of your Stories,
+    YOU SHOULD PLACE THEM HERE, not in the "IndexPage.razor" file.
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/blazor-ui.css" />
+    <link rel="stylesheet" href="BlazorDemoApp.styles.css" />
+    <HeadOutlet @rendermode="@InteractiveServer" />
+</head>
+
+<body>
+    <BlazorDemoApp.Components.App @rendermode="@InteractiveServer" />
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <!--
+    If you need to add <script> elements to include 
+    JavaScript files for canvas views of your Stories,
+    YOU SHOULD PLACE THEM HERE, not in the "IndexPage.razor" file.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="_framework/blazor.web.js"></script>
+</body>
+
+</html>

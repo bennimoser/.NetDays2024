@@ -1,0 +1,38 @@
+﻿@attribute [Stories("Card/CardExample")]
+
+<Stories TComponent="CardExample">
+    <ArgType For="_ => _!.ButtonText" Control="ControlType.Default"></ArgType>
+    <ArgType For="_ => _!.Title" Control="ControlType.Default"></ArgType>
+    <ArgType For="_ => _!.Text" Control="ControlType.Default"></ArgType>
+    <Story Name="Default">
+        <Arguments>
+            <Arg For="_ => _!.Title" Value='"Titel der Card"'></Arg>
+            <Arg For="_ => _!.Text" Value='"Text der Card"'></Arg>
+            <Arg For="_ => _!.ButtonText" Value='"Button Text der Card"'></Arg>
+        </Arguments>
+        <Template>
+            <CardExample @attributes="context.Args"></CardExample>
+        </Template>
+    </Story>
+    <Story Name="Bestellung">
+        <Arguments>
+            <Arg For="_ => _!.Title" Value='"Details zu Bestellung 0815"'></Arg>
+            <Arg For="_ => _!.Text" Value='"Leider hat unser Office-Hund ihren 42-Zoll-Fernseher gegessen"'></Arg>
+            <Arg For="_ => _!.ButtonText" Value='"Weitere Informationen"'></Arg>
+        </Arguments>
+        <Template>
+            <CardExample @attributes="context.Args"></CardExample>
+        </Template>
+    </Story>
+    
+    <Story Name="Super Duper">
+        <Arguments>
+            <Arg For="_ => _!.Title" Value='"Super Duper Details"'></Arg>
+            <Arg For="_ => _!.Text" Value='"Das ist mein super duper Text"'></Arg>
+            <Arg For="_ => _!.ButtonText" Value='"Weiter"'></Arg>
+        </Arguments>
+        <Template>
+            <CardExample @attributes="context.Args"></CardExample>
+        </Template>
+    </Story>
+</Stories>
